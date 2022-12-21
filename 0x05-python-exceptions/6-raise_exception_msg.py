@@ -1,11 +1,4 @@
 #!/usr/bin/python3
-"""
-    function that raises a type exception with message
-        """
-
-
-        def raise_exception_msg(message=""):
-                try:
-                            raise NameError(message)
-                            except:
-                                        raise
+def raise_exception_msg(message=""):
+    """Raise a NameError exception with a message."""
+    raise NameError(message)

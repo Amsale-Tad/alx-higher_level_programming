@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
- divides 2 integers and prints the result.
-     """
-
-
-     def safe_print_division(a, b):
+def safe_print_division(a, b):
+    """Returns the division of a by b."""
              try:
-                         x = a / b
-                             except:
-                                         x = None
-                                             finally:
-                                                         print("Inside result: {}".format(x))
-                                                                 return x
+                 x = a / b
+             except (TypeError, ZeroDivisionError):
+                 x = None
+             finally:
+                 print("Inside result: {}".format(x))
+             return (x)
