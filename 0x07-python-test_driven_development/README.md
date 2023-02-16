@@ -1,1 +1,2 @@
-0x07-python-test_driven_development
+Python - Test-driven development
+In this project, I started practicing test-driven development using docstring and unittest in Python.
