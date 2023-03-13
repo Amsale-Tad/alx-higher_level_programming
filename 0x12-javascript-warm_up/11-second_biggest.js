@@ -1,9 +1,18 @@
 #!/usr/bin/node
-if (process.argv.length <= 3) {
-    console.log(0);
-  } else {
-    const args = process.argv.map(Number)
-      .slice(2, process.argv.length)
-      .sort((a, b) => a - b);
-    console.log(args[args.length - 2]);
+function nextBiggest (arr) {
+  let max = 0; let result = 0;
+
+  for (const value of arr) {
+    const nr = Number(value);
+
+    if (nr > max) {
+      [result, max] = [max, nr];
+    } else if (nr < max && nr > result) {
+      result = nr;
+    }
   }
+
+  return result;
+}
+
+console.log(nextBiggest(process.argv));
